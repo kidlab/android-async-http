@@ -247,6 +247,23 @@ public class AsyncHttpClient {
     }
 
     /**
+     * Clear all headers. 
+     */
+    public void clearAllHeaders() {
+    	// TODO: not thread-safe!
+    	clientHeaderMap.clear();
+    }
+    
+    /**
+     * Remove header with name
+     * @param header the name of the header
+     */
+    public void removeHeader(String header) {
+    	// TODO: not thread-safe!
+    	clientHeaderMap.remove(header);
+    }
+    
+    /**
      * Sets basic authentication for the request. Uses AuthScope.ANY. This is the same as
      * setBasicAuth('username','password',AuthScope.ANY) 
      * @param username
